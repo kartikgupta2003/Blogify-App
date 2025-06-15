@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Blog</title>
+</head>
+<body>
+    <%- include('./partials/script') %>
+    <%- include('./partials/nav.ejs') %>
+    <div class="container mt-4">
+        <h1> <%= blog.title %></h1>
+        <img src="<%= blog.coverImageURL %>" width="728px" height="970px" >
+        <pre style="white-space: pre-wrap; word-wrap: break-word;">
+<!-- <pre> tag preserves whitespace and line breaks, and doesn't wrap long lines by default, which causes horizontal scrolling.
+    white-space: pre-wrap; → Preserves formatting like <pre> but allows line wrapping.
+
+word-wrap: break-word; → Breaks long words that overflow. -->
+        <p class="mt-3">
+            <%= blog.body %>
+        </p>
+        </pre>
+    </div>
+    <div class="container mt-4">
+        <img src = "<%= blog.createdBy.profileImageURL %>" width="50px"> 
+        <%= blog.createdBy.fullName %>
+    </div>
+    <div class="container mt-3">
+        <h1>Comments (<%= comments.length %>)</h1>
+    <% if(locals.user) { %>
+        
+        <form action="/blog/comment/<%= blog._id %>" method="post">
+          <!-- <div class="mb-3">
+    <label for="fullName" class="form-label">Full Name</label>
+    <input type="text" class="form-control" name="fullName" id="fullName"  aria-describedby="emailHelp">
+  </div> -->
+  <div class="mb-3">
+    <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+    <input type="text" class="form-control" name="content" placeholder="Enter your comment">
+  </div>
+  <button type="submit" class="btn btn-sm btn-primary">Add</button>
+</form>
+    <% } else {%>
+        <h4>Signin to add a comment</h4>
+    <% } %>
+    <div class="mt-3">
+    <% comments.forEach(comment => { %>
+        <div>
+            <img src = "<%= blog.createdBy.profileImageURL %>" width="50px"> 
+            <%= comment.createdBy.fullName %> :
+            <pre> <%=comment.content %> </pre>
+        </div>
+    <% }) %>
+</div>
+    </div>
+</body>

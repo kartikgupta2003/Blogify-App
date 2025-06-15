@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Add New Blog</title>
+</head>
+<body>
+    <%- include('./partials/script') %>
+    <%- include('./partials/nav.ejs') %>
+    <div class="container mt-3">
+        <form action="/blog" method="post" enctype="multipart/form-data">
+            <!-- this encryption type is required for uploading files through multer -->
+            <div class="mb-3">
+                 <!-- /*margin-bottom 3*/ -->
+              <label for="coverImage" class="form-label">Cover Image</label>
+              <input type="file" class="form-control" id="coverImage" name="coverImage" aria-describedby="coverImage">
+            </div>
+            <div class="mb-3">
+                 <!-- /*margin-bottom 3*/ -->
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <!-- <div class="form-floating"> -->
+                <label for="floatingTextarea" class="form-label">Body</label>
+                <textarea class="form-control"  id="body" name="body"></textarea>
+              </div>
+            <!-- </div> -->
+              <div class="mb-3">
+                 <!-- /*margin-bottom 3*/ -->
+                  <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
