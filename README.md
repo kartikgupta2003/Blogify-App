@@ -20,3 +20,5 @@ Tech Stack
 - Database: MongoDB
 - Frontend: EJS, Bootstrap
 - Authentication: JSON Web Tokens (JWT)
+
+Copy .env.example to .env and fill in your own credentials to run the app.
