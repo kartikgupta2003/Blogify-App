@@ -31,7 +31,7 @@ Copy .env.example to .env and fill in your own credentials to run the app.
 <img width="1918" height="877" alt="Screenshot (1395)" src="https://github.com/user-attachments/assets/e4aa79af-a88a-487b-a044-c06bcdebfcd3" />
 
 #Sign in
-<img width="1918" height="877" alt="Screenshot (1395)" src="https://github.com/user-attachments/assets/fe14b821-95e9-4843-aafa-c513185e04f5" />
+<img width="1920" height="955" alt="Screenshot (1402)" src="https://github.com/user-attachments/assets/fbb8607a-ebf7-4f72-a4e3-fae47a4f5c31" />
 
 #Sign up
 <img width="1917" height="931" alt="Screenshot (1401)" src="https://github.com/user-attachments/assets/fddc0436-a067-4e90-88d9-f43acca19009" />
