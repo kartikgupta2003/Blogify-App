@@ -1,6 +1,9 @@
 # Blogify-App
 A full-stack blogging application where users can sign up, create blogs with images, and comment on others' blogs.
 
+# Demo Video 
+https://drive.google.com/file/d/1Nux43XgNr-22mVnsyHnQU1g2syW6xkl6/view?usp=sharing
+
 Features
 
 User authentication using JWT
